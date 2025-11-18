@@ -14,8 +14,10 @@ struct Person {
     enum Gender gender;
 };
 int main() {
-    struct Person person
-        = { .gender = MALE };
+    printf("Enter gender (0 for MALE, 1 for FEMALE, 2 for OTHER): ");
+    int gender_input;
+    scanf("%d", &gender_input);
+    struct Person person = { .gender = gender_input };
     if (person.gender == MALE) {
         printf("Male\n");
     } else if (person.gender == FEMALE) {
